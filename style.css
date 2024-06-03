@@ -1,0 +1,119 @@
+/* Styling for google font icons*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+/* Color variables  */
+:root {
+  --main-bg-color: #f5f5f5;
+  --secondary-color: #ffd700;
+  --text-color: #333333;
+  --button-color: #6b5b95;
+  --hover-color: #c0b283;
+}
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  height: 10vh;
+}
+
+header > h1 {
+  color: var(--text-color);
+}
+
+.main {
+  flex: 1;
+}
+
+table {
+  display:grid;
+  border-collapse: collapse;
+  grid-template-columns: repeat(5, 5fr);
+  background: white;
+}
+
+thead, tbody, tr {
+  display: contents;
+}
+
+th{
+  height: 50px;
+  background: var(--secondary-color)
+}
+
+td {
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+tr {
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+}
+
+tr:nth-child(even) td{
+  background:lightgray;
+}
+
+#remove-book-button {
+  font-size: 16px;
+
+}
+
+footer {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: var(--secondary-color);
+}
+
+footer > span {
+  color: var(--text-color);
+  font-size: 18px;
+  font-style: italic;
+}
+
+.add-book {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.add-book-button {
+  display: flex;
+  border-style: none;
+  justify-content: center;
+  align-items:center;
+  background-color: transparent;
+  color: #6b5b95;
+  font-size: 32px;
+}
+
+.add-book-button:hover {
+  color: var(--hover-color);
+}
