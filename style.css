@@ -24,46 +24,84 @@ html, body {
 }
 
 body {
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
-  background-color: var(--main-bg-color);
   min-height: 100vh;
 }
+
+/* Header section */
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
-  height: 10vh;
+  height: 15vh;
 }
 
 header > h1 {
   color: var(--text-color);
+  display: flex;
+  align-items: center;
 }
 
-.main {
-  flex: 1;
+.material-symbols-outlined.header-logo {
+  font-size: 42px;
 }
+
+/* Add book button section */
+
+.add-book {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.add-book-button {
+  display: flex;
+  border-style: none;
+  justify-content: center;
+  align-items:center;
+  background-color: transparent;
+  color: #6b5b95;
+  font-size: 32px;
+}
+
+.add-book-button:hover {
+  color: var(--hover-color);
+}
+
+/* Table section */
 
 table {
-  display:grid;
-  border-collapse: collapse;
   grid-template-columns: repeat(5, 5fr);
+  table-layout: fixed;
   background: white;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-thead, tbody, tr {
-  display: contents;
+.scrollable {
+  overflow-y: auto;
+  height: 72.5vh;
+  max-height: 72.5vh;
+  border-collapse: collapse;
 }
 
-th{
+td, th, tr {
+  border: 1px solid darkgray;
+}
+
+th {
+  position: sticky;
+  top: 0;
   height: 50px;
-  background: var(--secondary-color)
+  background: var(--secondary-color);
+  font-size: 24px;
 }
 
 td {
-  display: flex;
   height: 35px;
   justify-content: center;
   align-items: center;
@@ -81,9 +119,9 @@ tr:nth-child(even) td{
 
 #remove-book-button {
   font-size: 16px;
-
 }
 
+/* Footer Section */
 footer {
   display:flex;
   justify-content: center;
@@ -96,24 +134,4 @@ footer > span {
   color: var(--text-color);
   font-size: 18px;
   font-style: italic;
-}
-
-.add-book {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.add-book-button {
-  display: flex;
-  border-style: none;
-  justify-content: center;
-  align-items:center;
-  background-color: transparent;
-  color: #6b5b95;
-  font-size: 32px;
-}
-
-.add-book-button:hover {
-  color: var(--hover-color);
 }
