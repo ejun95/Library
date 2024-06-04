@@ -75,16 +75,19 @@ header > h1 {
 /* Table section */
 
 table {
+
   grid-template-columns: repeat(5, 5fr);
   table-layout: fixed;
   background: white;
   border-collapse: collapse;
-  width: 100%;
+  width:100%;
 }
 
 .scrollable {
   overflow-y: auto;
   height: 72.5vh;
+  margin-left: 100px;
+  margin-right: 100px;
   max-height: 72.5vh;
   border-collapse: collapse;
 }
@@ -134,4 +137,73 @@ footer > span {
   color: var(--text-color);
   font-size: 18px;
   font-style: italic;
+}
+
+/* Form Section */ 
+.close-diag-container {
+  display: flex;
+  justify-content: end;
+}
+
+#close-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+}
+
+.material-symbols-outlined.close-diag-icon {
+  font-size: 16px;
+}
+
+#add-book-dialog {
+  min-height: 500px;
+  max-height: 700px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+#add-book-dialog > h3 {
+  text-align: center;
+  font-size: 24px;
+
+}
+
+hr {
+  margin-bottom: 50px;
+}
+
+#dialog-form {
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+}
+
+#dialog-form > input {
+  height: 20px;
+  margin-bottom: 25px;
+}
+
+#dialog-form > label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.input-checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+#add-book-submit {
+  border-style: none;
+  color: white;
+  font-size: 32px;
+  font-weight: bolder;
+  background-color: var(--button-color);
+  height: 50px;
+}
+
+#add-book-submit:hover {
+  background-color: var(--hover-color);
 }

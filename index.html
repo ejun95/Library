@@ -29,19 +29,25 @@
         </button>
       </div>
       <dialog id='add-book-dialog'>
-        <button id='close-dialog'><span class="material-symbols-outlined">
+        <div class='close-diag-container'>
+          <button id='close-dialog'><span class="material-symbols-outlined close-diag-icon">
             close
           </span></button>
+        </div>
+        <h3>Add A Book</h3>
+        <hr>
         <form id='dialog-form'>
           <label for="book-title">Title</label>
           <input type="text" name="book-title" id="book-title">
           <label for="book-author">Author</label>
           <input type="text" name="book-author" id="book-author">
           <label for="book-pages">Pages</label>
-          <input type="number" name="book-pages" id="book-pages" min='1'>
-          <label for="book-read">Finished Reading</label>
-          <input type="checkbox" name="book-read" id="book-read">
-          <button type="submit" id='add-book-submit'>Add</button>
+          <input type="number" name="book-pages" id="book-pages" min='1' required>         
+          <div class="input-checkbox">
+            <label for="book-read">Finished Reading?</label>
+            <input type="checkbox" name="book-read" id="book-read">     
+          </div> 
+          <button type="submit" id='add-book-submit'>Add Book</button>
         </form>
       </dialog>
       <div class="scrollable">
